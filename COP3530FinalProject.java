@@ -77,7 +77,7 @@ public class COP3530FinalProject {
             }
             else if (input.equals("5"))
             {
-                final int TEST_CASES = 10000;
+                final int TEST_CASES = 100000;
                 System.out.println("Adding courses");
                 long t1 = System.nanoTime();
                 Random rand = new Random();
