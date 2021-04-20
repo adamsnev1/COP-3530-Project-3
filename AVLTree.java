@@ -2,10 +2,11 @@ package cop3530.pkgfinal.project;
 import java.util.ArrayList;
 /**
  *
- * @author adams
+ * @author Adam Havens
  */
 public class AVLTree
 {
+    //Node class to store data
     private class Node
     {
         public Course course;
@@ -25,6 +26,7 @@ public class AVLTree
         return b;
     }
     
+    //return height of tree
     private static int height(Node root)
     {
         if (root == null)
@@ -40,6 +42,7 @@ public class AVLTree
             return max(root.left.height + 1, root.right.height + 1);
     }
     
+    //return whether the tree is AVL
     private static boolean isAVL(Node root)
     {
         if (root == null)
@@ -51,6 +54,7 @@ public class AVLTree
         return false;
     }
     
+    //return balance factor of a node
     private static int bf(Node root)
     {
         if (root != null)
@@ -58,6 +62,7 @@ public class AVLTree
         return 0;
     }
     
+    //rotate left when the tree is right heavy
     private void rotateLeft(Node root)
     {
         Node newRoot = new Node();
@@ -75,6 +80,7 @@ public class AVLTree
         root.height = newRoot.height;
     }
     
+    //rotate right when the tree is left heavy
     private void rotateRight(Node root)
     {
         /*Node newRoot = root.left;
@@ -109,6 +115,7 @@ public class AVLTree
         rotateLeft(root);
     }
     
+    //traverse the tree
     public void traverse(Node root, ArrayList<Course> courses)
     {
         if (root != null)
@@ -120,6 +127,7 @@ public class AVLTree
         }
     }
     
+    //do rotations if the tree is not balanced
     private void fixTree(Node root)
     {
         if (isAVL(root))
@@ -158,6 +166,7 @@ public class AVLTree
         }
     }
     
+    //helper function used to recursively insert nodes
     private void insertHelper(Node root, Node toBeInserted)
     {
         if (this.root == null)
@@ -190,6 +199,7 @@ public class AVLTree
         root.height = height(root);
     }
     
+    //insert a course
     public void insert(Course course)
     {
         Node node = new Node();
@@ -198,6 +208,7 @@ public class AVLTree
         fixTree(root);
     }
     
+    //helper function to find course recursively
     private Course findCourseHelper(Node root, int id)
     {
         if (root == null)
@@ -216,6 +227,7 @@ public class AVLTree
         }
     }
     
+    //find a course with given id
     public Course findCourse(int id)
     {
         return findCourseHelper(root, id);
