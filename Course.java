@@ -5,6 +5,8 @@ import javafx.util.Pair;
 /**
  *
  * @author adams
+ 
+ Class to store information about a course
  */
 public class Course
 {
