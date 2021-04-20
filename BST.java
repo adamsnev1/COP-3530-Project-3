@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 public class BST
 {
+    //node class to store data
     private class Node
     {
         public Student student;
@@ -27,6 +28,7 @@ public class BST
         return b;
     }
     
+    //traverse the tree
     public void traverse(Node root, ArrayList<Student> students)
     {
         if (root != null)
@@ -38,6 +40,7 @@ public class BST
         }
     }
     
+    //not used
     private void insertHelper(Node root, Node toBeInserted)
     {
         if (this.root == null)
@@ -68,6 +71,7 @@ public class BST
         }
     }
     
+    //insert a student
     public void insert(Student student)
     {
         Node node = new Node();
@@ -108,6 +112,7 @@ public class BST
         }
     }
     
+    //not used
     private Student findStudentHelper(Node root, int id)
     {
         if (root == null)
@@ -126,6 +131,7 @@ public class BST
         }
     }
     
+    //find a student with a given id
     public Student findStudent(int id)
     {
         //return findStudentHelper(root, id);
