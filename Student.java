@@ -3,7 +3,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author adams
+ * @author Adam Havens
+ 
+ Class to store student data
  */
 public class Student
 {
