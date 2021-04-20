@@ -3,7 +3,9 @@ import java.util.ArrayList;
 import javafx.util.Pair;
 /**
  *
- * @author adams
+ * @author Adam Havens
+ 
+ class to store the meeting times of a class
  */
 public class MeetingTime
 {
