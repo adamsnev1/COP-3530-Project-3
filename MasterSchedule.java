@@ -2,11 +2,11 @@ package cop3530.pkgfinal.project;
 import java.util.ArrayList;
 /**
  *
- * @author adams
+ * @author Adam Havens
  */
 public class MasterSchedule
 {
-    //All courses--replace with another data structure
+    //All courses--stored in an AVL Tree
     private AVLTree courses = new AVLTree();
     public MasterSchedule()
     {
